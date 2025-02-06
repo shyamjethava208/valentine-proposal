@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffebee; /* Light pink background */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#main {
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    color: #d32f2f; /* Deep red color */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+#yes {
+    background-color: #4caf50; /* Green */
+    color: white;
+}
+
+#no {
+    background-color: #e74c3c; /* Red */
+    color: white;
+}
+
+#yes:hover {
+    background-color: #388e3c;
+}
+
+#no:hover {
+    background-color: #c0392b;
+}
+
+/* Fullscreen YES Button */
+.fullscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 0;
+}

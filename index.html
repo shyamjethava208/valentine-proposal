@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documbody {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #ffebee; /* Light pink background */
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    
+    #main {
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 28px;
+        color: #d32f2f; /* Deep red color */
+    }
+    
+    button {
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        margin: 10px;
+    }
+    
+    #yes {
+        background-color: #4caf50; /* Green */
+        color: white;
+    }
+    
+    #no {
+        background-color: #e74c3c; /* Red */
+        color: white;
+    }
+    
+    #yes:hover {
+        background-color: #388e3c;
+    }
+    
+    #no:hover {
+        background-color: #c0392b;
+    }
+    
+    /* Fullscreen YES Button */
+    .fullscreen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #4caf50;
+        color: white;
+        border-radius: 0;
+    }
+    ent</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1>will you be my valentine</h1>
+      <div>
+        <button id="yes">YES</button>
+      </div>
+      <div >
+        <button id = "no">NO</button>
+      </div>
+      <script src="script.js"></script>
+    </div>
+    <script>
+        const yes = document.getElementById("yes");
+const no = document.getElementById("no");
+const main = document.getElementById("main");
+let isNo = 0;
+
+yes.addEventListener("click", () => {
+    main.innerHTML = "I knew you would say yes <3";
+});
+
+no.addEventListener("click", () => {
+    isNo++;
+
+    if (isNo < 3) {
+        let currentHeight = parseInt(window.getComputedStyle(yes).height);
+        let currentWidth = parseInt(window.getComputedStyle(yes).width);
+
+        yes.style.height = (currentHeight + 20) + "px"; 
+        yes.style.width = (currentWidth + 30) + "px";
+    } else {
+        no.style.display = "none";
+        yes.style.position = "absolute"; 
+        yes.style.top = "0";
+        yes.style.left = "0";
+        yes.style.height = "100vh"; 
+        yes.style.width = "100vw"; 
+        yes.style.fontSize = "40px";
+        yes.innerHTML = "YES"; 
+    }
+});
+
+    </script>
+  </body>
+</html>
